@@ -18,9 +18,10 @@ var SceneTwo = new Phaser.Class({
         this.load.image('bubble', 'assets/bubbleplats.png');
         this.load.image('bomb', 'assets/spikes.png');
         this.load.spritesheet('friend', 'assets/octo.png',
-        { frameWidth: 32, frameHeight: 48 }
-        
-    );
+        { frameWidth: 32, frameHeight: 48 },)
+        this.load.audio('random','assets/random.wav');
+        this.load.audio('jump','assets/jump.wav');
+        this.load.audio('hurt','assets/hitHurt.wav');
     },
 
 
@@ -123,6 +124,8 @@ var SceneTwo = new Phaser.Class({
         if(cursors.up.isDown&&player.body.touching.down)
         {
             player.setVelocityY(-330);
+            console.log('jump')
+            this.sound.play('jump');
         }
 
         if (gameOver==true) {
@@ -149,6 +152,7 @@ var SceneTwo = new Phaser.Class({
         axolotl.disableBody(true,true);
         score+=15;
         scoreText.setText('Score:' + score);
+        this.sound.play('random');
     
         if (axo.countActive(true) === 0)
         {
@@ -170,6 +174,7 @@ var SceneTwo = new Phaser.Class({
 
 
     hitBomb:function(player,bomb) {
+        this.sound.play('hurt');
         this.physics.pause();
         player.setTint(0xff0000);
         player.anims.play('turn');

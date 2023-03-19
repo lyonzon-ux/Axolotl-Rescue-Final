@@ -11,8 +11,8 @@ var SceneOne = new Phaser.Class({
             200,
             "Axolotl Rescue",
             {
-                fontsize:'100px',
-                color: "#00000",
+                fontsize:100,
+                color: "#f74d04",
                 fontStyle: "bold"
             }
         ).setOrigin(0.5);
@@ -54,6 +54,30 @@ var SceneOne = new Phaser.Class({
             400,
             400,
             "Use the arrow keys to jump and move around",
+            {
+                fontsize:50,
+                color: "#00000",
+                fontStyle: "bold"
+            }
+        ).setOrigin(0.5);
+
+
+        var text = this.add.text(
+            400,
+            400,
+            "Use the arrow keys to jump and move around",
+            {
+                fontsize:50,
+                color: "#00000",
+                fontStyle: "bold"
+            }
+        ).setOrigin(0.5);
+
+
+        var text = this.add.text(
+            400,
+            550,
+            "Created by Loumary Yonzon//2023",
             {
                 fontsize:50,
                 color: "#00000",

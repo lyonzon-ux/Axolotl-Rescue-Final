@@ -139,7 +139,7 @@ var SceneTwo = new Phaser.Class({
                 }
                 
             })
-            score=0
+            
         }
 
     

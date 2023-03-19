@@ -18,10 +18,11 @@ var deathScene = new Phaser.Class({
             }
         ).setOrigin(0.5);
 
+
         var text = this.add.text(
             400,
-            300,
-            "Game will restart shortly....",
+            200,
+            "Final Score is "+ score,
             {
                 fontsize:50,
                 color: "#00000",
@@ -29,12 +30,25 @@ var deathScene = new Phaser.Class({
             }
         ).setOrigin(0.5);
 
+        var text = this.add.text(
+            400,
+            300,
+            "Game will restart shortly...",
+            {
+                fontsize:50,
+                color: "#00000",
+                fontStyle: "bold"
+            }
+        ).setOrigin(0.5);
+
+       score=0
         this.time.addEvent({
             delay: 5000,
             loop: false,
             callback:() => {
                 this.scene.start("SceneOne");
             }
+        
     })
     },
     update: function(){}

@@ -13,7 +13,7 @@ var deathScene = new Phaser.Class({
             "Game Over",
             {
                 fontsize:50,
-                color: "#00000",
+                color: "#000321",
                 fontStyle: "bold"
             }
         ).setOrigin(0.5);

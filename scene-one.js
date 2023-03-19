@@ -8,10 +8,10 @@ var SceneOne = new Phaser.Class({
     create: function() {
         var text = this.add.text(
             400,
-            250,
+            200,
             "Axolotl Rescue",
             {
-                fontsize:50,
+                fontsize:'100px',
                 color: "#00000",
                 fontStyle: "bold"
             }

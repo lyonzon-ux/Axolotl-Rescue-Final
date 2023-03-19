@@ -103,7 +103,7 @@ var SceneTwo = new Phaser.Class({
 
         if (cursors.left.isDown)
         {
-            console.log("It kinda works?")
+            //console.log("It kinda works?")
             player.setVelocityX(-160);
         
             player.anims.play('left', true);
@@ -124,12 +124,12 @@ var SceneTwo = new Phaser.Class({
         if(cursors.up.isDown&&player.body.touching.down)
         {
             player.setVelocityY(-330);
-            console.log('jump')
+            //console.log('jump')
             this.sound.play('jump');
         }
 
         if (gameOver==true) {
-            console.log("AAAAAgameover");
+            //console.log("AAAAAgameover");
             gameOver=false;
             this.time.addEvent({
                 delay: 3000,
@@ -180,16 +180,7 @@ var SceneTwo = new Phaser.Class({
         player.anims.play('turn');
         gameOver=true;
 
-        //if (gameOver==true) {
-        //    console.log("gameover");
-            //this.time.addEvent({
-            //    delay: 3000,
-            //    loop: false,
-            //    callback:() => {
-            //        this.scene.start("deathScene");
 
-        //}
-     //})
     }
     
 
